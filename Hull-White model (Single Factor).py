@@ -6,10 +6,10 @@
 
 # In financial mathematics, the Hull–White model is a model of future interest rates.
 # In its most generic formulation, it belongs to the class of no-arbitrage models 
-# that are able to fit today's term structure of interest rates.
-# The "one factor means" refers to the single stochastic factor that drives the dynamics of short term interest rate
-# The stochastic process is normally modelles as a Wiener process of Brownian motion
-# The single factor captures the uncertainty and volatility of interest rates movements over time
+# that can fit today's term structure of interest rates.
+# The "one factor means" refers to the single stochastic factor that drives the dynamics of short-term interest rate
+# The stochastic process is normally modeled as a Wiener process of Brownian motion
+# The single factor captures the uncertainty and volatility of interest rate movements over time
 
 
 # In[63]:
@@ -45,7 +45,7 @@ todays_date = ql.Date(1, 3, 2024)
 # In[66]:
 
 
-# Set up the Quant Lib with evaluation date. Everything starts with “evaluation date” which means the date you want to value a instrument. 
+# Set up the Quant Lib with the evaluation date. Everything starts with “evaluation date” which means the date you want to value an instrument. 
 ql.Settings.instance().setEvaluationDate(todays_date)
 
 
@@ -63,7 +63,7 @@ spot_curve_handle = ql.YieldTermStructureHandle(spot_curve)
 # (hw_process) using the specified parameters
 # ql.HullWhiteProcess(riskFreeTS, a, sigma)
 # The 3 parameters of the model are: 
-# 1) mean reverting level (assumed to be the Sport Curve)
+# 1) mean reverting level (assumed to be the Spot Curve)
 # 2) Rate of mean reversion (a)
 # 3) Volatility (sigma)
 hw_process = ql.HullWhiteProcess(spot_curve_handle, a, sigma)
